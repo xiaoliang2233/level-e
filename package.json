@@ -1,0 +1,26 @@
+{
+  "name": "levele",
+  "version": "1.0.0",
+  "description": "vue和angular混合开发",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --config ./webpack.dev.config.js --progress",
+    "build": "webpack --config ./webpack.test.config.js"
+  },
+  "keywords": [
+    "vue",
+    "angular"
+  ],
+  "author": "xiaoliang2233@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.1",
+    "vue-loader": "^13.0.4",
+    "vue-template-compiler": "^2.4.2"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^2.30.1"
+  }
+}
