@@ -15,10 +15,24 @@
   "author": "xiaoliang2233@gmail.com",
   "license": "ISC",
   "dependencies": {
+    "@angular/common": "^4.3.5",
+    "@angular/compiler": "^4.3.5",
+    "@angular/core": "^4.3.5",
+    "@angular/platform-browser": "^4.3.5",
+    "@angular/platform-browser-dynamic": "^4.3.5",
+    "@types/node": "^8.0.24",
+    "awesome-typescript-loader": "^3.2.3",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.1",
+    "css-loader": "^0.28.5",
+    "rxjs": "^5.4.3",
+    "style-loader": "^0.18.2",
+    "typescript": "^2.4.2",
+    "vue": "^2.4.2",
     "vue-loader": "^13.0.4",
-    "vue-template-compiler": "^2.4.2"
+    "vue-template-compiler": "^2.4.2",
+    "webpack": "^3.5.5",
+    "zone.js": "^0.8.16"
   },
   "devDependencies": {
     "html-webpack-plugin": "^2.30.1",
