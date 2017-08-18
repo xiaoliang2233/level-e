@@ -6,10 +6,9 @@
 
 <script>
   export default {
-    name: 'app',
+    name: 'app-for-vue',
     data() {
-      return {
-      }
+      return {}
     }
   }
 </script>
