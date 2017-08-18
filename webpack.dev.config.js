@@ -22,13 +22,17 @@ module.exports = {
     ]
   },
   devtool: 'cheap-module-eval-source-map',
-  plugins: [new HtmlWebpackPlugin({
-    template: path.resolve(__dirname, './index.html'),
-  })],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, './index.html'),
+    }),
+    new webpack.HotModuleReplacementPlugin()
+  ],
   devServer: {
     host: "dev.baoqin.me",
     port: 7788,
     open: true,
+    hot: true
     // inline: true,
   }
 }
