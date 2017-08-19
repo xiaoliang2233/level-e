@@ -6,7 +6,7 @@
 
 <script>
   export default {
-    name: 'app-for-vue',
+    name: 'VueAppComponent',
     data() {
       return {}
     }

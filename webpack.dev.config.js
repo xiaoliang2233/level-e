@@ -12,7 +12,7 @@ module.exports = {
     filename: '[id].[name].js',
   },
   resolve: {
-    extensions: ['.js', '.ts', 'vue'],
+    extensions: ['.js', '.ts', '.vue'],
     mainFields: ["module", "main", "browser"],
     modules: [
       path.resolve(__dirname, './node_modules'),
