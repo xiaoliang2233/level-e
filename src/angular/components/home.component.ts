@@ -9,11 +9,13 @@ const Vue = require("vue/dist/vue.js")
 
 export class HomeComponent {
   ngAfterViewInit() {
-    console.log(VueAppComponent)
-    let vm1 = new Vue({
-      el: '#vue-mount-element',
-      template: "<vue-app-component/>",
-      components: {VueAppComponent}
-    })
+    // let vm1 = new Vue({
+    //   el: '#vue-mount-element',
+    //   template: "<vue-app-component/>",
+    //   components: {VueAppComponent}
+    // })
+
+    const app = new Vue(VueAppComponent)
+    app.$mount("#vue-mount-element")
   }
 } 
