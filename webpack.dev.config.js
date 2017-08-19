@@ -12,11 +12,15 @@ module.exports = {
     filename: '[id].[name].js',
   },
   resolve: {
-    extensions: ['.js', '.ts'],
+    extensions: ['.js', '.ts', 'vue'],
     mainFields: ["module", "main", "browser"],
     modules: [
       path.resolve(__dirname, './node_modules'),
-    ]
+    ],
+    // https://github.com/vuejs-templates/webpack/issues/215
+    alias: {
+      vue: 'vue/dist/vue.js'
+    }
   },
   module: {
     rules: [
@@ -55,7 +59,7 @@ module.exports = {
     net: 'empty',
   },
   devServer: {
-    host: "dev.baoqin.me",
+    host: "localhost",
     port: 7788,
     open: true,
     hot: true,

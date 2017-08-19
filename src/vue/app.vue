@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <h1>hello, vue</h1>
   </div>
 </template>
@@ -13,7 +13,7 @@
   }
 </script>
 
-<style>
+<style scoped>
   h1,
   h2 {
     font-weight: normal;
