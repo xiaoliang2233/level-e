@@ -4,7 +4,7 @@ const VueAppComponent = require("../../vue/app.vue").default
 const Vue = require("vue/dist/vue.js")
 
 @Component({
-  template: `<div id="vue-mount-element"></div>`,
+  template: `<div>this is angular Component</div><div id="vue-mount-element"></div>`,
 })
 
 export class HomeComponent {

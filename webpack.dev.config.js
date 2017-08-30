@@ -5,7 +5,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: {
     index_angular: './src/main-ng.ts',
-    index_vue: './src/main.js'
+    index_vue: './src/main.js',
+    index_react: './src/react/main.jsx'
   },
   output: {
     path: "/",
@@ -43,6 +44,10 @@ module.exports = {
       {
         test: /\.css$/,
         loaders: 'style-loader!css-loader'
+      },
+      {
+        test: /\.jsx$/,
+        loaders: ['babel-loader']
       }
     ]
   },

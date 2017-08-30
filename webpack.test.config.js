@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: {
     index_angular: './src/main-ng.ts',
-    index_vue: './src/main.js'
+    index_vue: './src/main.jsx'
   },
   output: {
     path: path.resolve(__dirname, "./dist"),
