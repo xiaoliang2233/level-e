@@ -5,20 +5,24 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: {
     index_angular: './src/main-ng.ts',
-    index_vue: './src/main.jsx'
+    index_vue: './src/main.js',
+    index_react: './src/react/main.jsx'
   },
   output: {
     path: path.resolve(__dirname, "./dist"),
     filename: '[id].[name].js',
-    // publicPath: path.resolve(__dirname, "./dist")
-    publicPath: "./dist"
+    publicPath:  '.'
   },
   resolve: {
-    extensions: ['.js', '.ts'],
+    extensions: ['.js', '.ts', '.vue'],
     mainFields: ["module", "main", "browser"],
     modules: [
       path.resolve(__dirname, './node_modules'),
-    ]
+    ],
+    // https://github.com/vuejs-templates/webpack/issues/215
+    alias: {
+      vue: 'vue/dist/vue.js'
+    }
   },
   module: {
     rules: [
@@ -35,13 +39,16 @@ module.exports = {
         test: /\.ts$/,
         loader: 'awesome-typescript-loader',
         options: {
-          // 使用tsconfig.json文件中的配置
           tsconfig: 'tsconfig.json'
         }
       },
       {
         test: /\.css$/,
         loaders: 'style-loader!css-loader'
+      },
+      {
+        test: /\.jsx$/,
+        loaders: ['babel-loader']
       }
     ]
   },
@@ -56,12 +63,5 @@ module.exports = {
   node: {
     fs: 'empty',
     net: 'empty',
-  },
-  devServer: {
-    host: "dev.baoqin.me",
-    port: 7788,
-    open: true,
-    hot: true,
-    inline: true,
   }
 }

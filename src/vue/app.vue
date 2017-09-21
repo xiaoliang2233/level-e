@@ -20,10 +20,10 @@
       },
       change(){
         this.msg = "😁";
+        console.log(this);
       }
     },
     mounted(){
-      console.log(this);
     }
   }
 </script>

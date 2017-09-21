@@ -25,7 +25,7 @@ const Vue = require("vue/dist/vue.js")
 
 export class HomeComponent {
   msg = "angular";
-  msg2 = "hello"
+  msg2 = "hello";
   getTime(){
     return (new Date()).toString();
   }
