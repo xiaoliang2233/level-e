@@ -1,6 +1,8 @@
 <template>
-  <div>
-    <h1>hello, vue</h1>
+  <div class="jj">
+    <h1>hello, {{msg}}</h1>
+    <p>显示时间 {{hello()}}</p>
+    <button @click="change()">戳我!</button>
   </div>
 </template>
 
@@ -8,16 +10,23 @@
   export default {
     name: 'VueAppComponent',
     data() {
-      return {}
+      return {
+        msg: "vue"
+      }
+    },
+    methods : {
+      hello(){
+        return (new Date()).toString();
+      },
+      change(){
+        this.msg = "😁";
+      }
     }
   }
 </script>
 
 <style scoped>
-  h1,
-  h2 {
-    font-weight: normal;
-    background-color: #ff8800;
+  .jj{
+    border: 1px solid #00ff88;
   }
-
 </style>
