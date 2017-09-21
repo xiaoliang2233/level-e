@@ -21,12 +21,16 @@
       change(){
         this.msg = "😁";
       }
+    },
+    mounted(){
+      console.log(this);
     }
   }
 </script>
 
 <style scoped>
   .jj{
-    border: 1px solid #00ff88;
+    border: 1px solid darkgreen;
+    margin:10px;
   }
 </style>
